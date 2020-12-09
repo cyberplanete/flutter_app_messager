@@ -35,7 +35,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   //Do something with the user input.
                 },
                 decoration: kInputTextDecoration.copyWith(
-                    hintText: 'Entrer votre adresse email')),
+                    hintText: 'Entrez votre adresse email')),
             SizedBox(
               height: 8.0,
             ),
