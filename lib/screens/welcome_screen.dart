@@ -1,15 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_messager/screens/login_screen.dart';
+import 'package:flutter_app_messager/screens/registration_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
+  static const String id = 'WelcomeScreen';
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _WelcomeScreenState extends State<WelcomeScreen>
+    with SingleTickerProviderStateMixin {
+  AnimationController animationController;
+  Animation animation;
+
+  @override
+  void initState() {
+    super.initState();
+    //Cette classe herite de SingleTickerProviderStateMixin. WelcomeScreen devient un provider. this object
+    animationController = AnimationController(
+        // duration: Duration(seconds: 5), vsync: this, upperBound: 100);
+        duration: Duration(seconds: 1),
+        vsync: this);
+    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
+        .animate(animationController);
+    animationController.forward();
+    animationController.addListener(() {
+      //Pour animation
+      setState(() {});
+      print(animationController.value);
+      print(animation.value);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      //Exemple animation
+      //value from animation mais nécessite setState
+      //backgroundColor: Colors.red.withOpacity(animationController.value),
+      backgroundColor: animation.value,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -18,12 +47,20 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           children: <Widget>[
             Row(
               children: <Widget>[
-                Container(
-                  child: Image.asset('images/logo.png'),
-                  height: 60.0,
+                Hero(
+                  tag: 'logo',
+                  child: Container(
+                    child: Image.asset('images/logo.png'),
+                    height: 60.0,
+                    //Exemple animation
+                    // height: animationController.value,
+                  ),
                 ),
                 Text(
-                  'Flash Chat',
+                  'Flash Messager',
+                  //Exemple Animation
+                  //Loader necessite upperbound
+                  //'${animationController.value.toInt()}%',
                   style: TextStyle(
                     fontSize: 45.0,
                     fontWeight: FontWeight.w900,
@@ -43,11 +80,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: MaterialButton(
                   onPressed: () {
                     //Go to login screen.
+                    Navigator.pushNamed(context, LoginScreen.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,
                   child: Text(
-                    'Log In',
+                    'Se connecter',
                   ),
                 ),
               ),
@@ -61,11 +99,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: MaterialButton(
                   onPressed: () {
                     //Go to registration screen.
+                    Navigator.pushNamed(context, RegistrationScreen.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,
                   child: Text(
-                    'Register',
+                    'S\'enregistrer',
                   ),
                 ),
               ),
