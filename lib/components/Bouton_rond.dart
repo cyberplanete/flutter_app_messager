@@ -24,6 +24,7 @@ class BoutonRondWidget extends StatelessWidget {
           height: 42.0,
           child: Text(
             titleTextButton,
+            style: TextStyle(color: Colors.white),
           ),
         ),
       ),
