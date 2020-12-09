@@ -8,7 +8,7 @@ Utilise Firebase Cloud Firestore ainsi que le package d'authentification Firebas
 ## Screenshot
 
 
-![screenshot1](screenshots/screenshot1.png)
+![screenshot1](screenshots/screenshot1.jpg)
 
 
 ### En cours de développement
