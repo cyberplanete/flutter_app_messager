@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_messager/components/Bouton_rond.dart';
 import 'package:flutter_app_messager/constants.dart';
 
-class LoginScreen extends StatefulWidget {
-  static const String id = 'LoginScreen';
+class RegistrationScreen extends StatefulWidget {
+  static const String id = 'RegistrationScreen';
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _RegistrationScreenState createState() => _RegistrationScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,30 +31,28 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 48.0,
             ),
             TextField(
-              onChanged: (value) {
-                //Do something with the user input.
-              },
-              decoration: kInputTextDecoration.copyWith(
-                hintText: 'Entrez votre adresse email',
-              ),
-            ),
-            SizedBox(
-              height: 8.0,
-            ),
-            TextField(
                 onChanged: (value) {
                   //Do something with the user input.
                 },
                 decoration: kInputTextDecoration.copyWith(
-                    hintText: 'Entrez votre mot de passe.')),
+                    hintText: 'Entrer votre adresse email')),
+            SizedBox(
+              height: 8.0,
+            ),
+            TextField(
+              onChanged: (value) {
+                //Do something with the user input.
+              },
+              decoration: kInputTextDecoration.copyWith(
+                  hintText: 'Entrez votre mot de passe.'),
+            ),
             SizedBox(
               height: 24.0,
             ),
-            BoutonRondWidget(
-              titleTextButton: 'Se connecter',
-              functionOnPressed: () {},
-              colorButton: Colors.lightBlueAccent,
-            ),
+            new BoutonRondWidget(
+                titleTextButton: 'S\'enregistrer',
+                colorButton: Colors.blueAccent,
+                functionOnPressed: () {}),
           ],
         ),
       ),

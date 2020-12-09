@@ -2,7 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_messager/components/Bouton_rond.dart';
 import 'package:flutter_app_messager/screens/login_screen.dart';
-import 'package:flutter_app_messager/screens/registration_screen.dart';
+import 'package:flutter_app_messager/screens/enregistement_ecran.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'WelcomeScreen';
@@ -81,7 +81,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             SizedBox(
               height: 48.0,
             ),
-            BoutonRondWidget(
+            new BoutonRondWidget(
               functionOnPressed: () {
                 //Go to login screen.
                 Navigator.pushNamed(context, LoginScreen.id);
@@ -89,7 +89,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               colorButton: Colors.lightBlue,
               titleTextButton: 'Se connecter',
             ),
-            BoutonRondWidget(
+            new BoutonRondWidget(
               functionOnPressed: () {
                 //Go to registration screen.
                 Navigator.pushNamed(context, RegistrationScreen.id);

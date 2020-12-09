@@ -6,7 +6,9 @@ class BoutonRondWidget extends StatelessWidget {
   final Color colorButton;
   final Function functionOnPressed;
   const BoutonRondWidget(
-      {this.titleTextButton, this.colorButton, this.functionOnPressed});
+      {this.titleTextButton,
+      this.colorButton,
+      @required this.functionOnPressed});
 
   @override
   Widget build(BuildContext context) {

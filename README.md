@@ -5,10 +5,11 @@ Utilise Firebase Cloud Firestore ainsi que le package d'authentification Firebas
 
 ### Compatible Android ou Ios
 
-## Screenshot
+## Screenshots
 
 
-![screenshot1](screenshots/screenshot1.jpg)
-
+![screenshot1](screenshots/screenshot1.png)
+![screenshot2](screenshots/screenshot2.png)
+![screenshot3](screenshots/screenshot3.png)
 
 ### En cours de développement
