@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "65001196158",
+    "project_id": "tchat-messager",
+    "storage_bucket": "tchat-messager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65001196158:android:96bd3119fb1df6b157262f",
+        "android_client_info": {
+          "package_name": "net.cyberplanete.flutter_app_messager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65001196158-eqprevg4520jd8gc04sl71fr05it2uep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_Ewg5VyCV0Jo9YvrY5qMfxWbrr-j41Xg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65001196158-eqprevg4520jd8gc04sl71fr05it2uep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

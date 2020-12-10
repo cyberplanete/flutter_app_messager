@@ -9,6 +9,9 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
+  String utilisateur;
+  String password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,8 +34,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 48.0,
             ),
             TextField(
+                keyboardType: TextInputType.emailAddress,
+                textAlign: TextAlign.center,
                 onChanged: (value) {
-                  //Do something with the user input.
+                  utilisateur = value;
                 },
                 decoration: kInputTextDecoration.copyWith(
                     hintText: 'Entrez votre adresse email')),
@@ -40,8 +45,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 8.0,
             ),
             TextField(
+              obscureText: true,
+              textAlign: TextAlign.center,
               onChanged: (value) {
-                //Do something with the user input.
+                password = value;
               },
               decoration: kInputTextDecoration.copyWith(
                   hintText: 'Entrez votre mot de passe.'),
@@ -52,7 +59,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             new BoutonRondWidget(
                 titleTextButton: 'S\'enregistrer',
                 colorButton: Colors.blueAccent,
-                functionOnPressed: () {}),
+                functionOnPressed: () {
+                  print(utilisateur);
+                  print(password);
+                }),
           ],
         ),
       ),
